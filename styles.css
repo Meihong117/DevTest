@@ -4,23 +4,32 @@
   background-size: cover;
   background-image: linear-gradient(
       to left,
-      rgba(153, 154, 155, 0),
-      rgba(48, 47, 48, 0.35)
+      rgba(245, 248, 250, 0),
+      rgba(20, 19, 19, 0.35)
     ),
     url("./assets/main-banner.png");
   height: 600px;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .header-wapper {
-  padding: 200px 170px;
-  margin: 40px;
-  width: 350px;
+  margin-left: 140px;
+  width: 50%;
   color: aliceblue;
+}
+.header-wapper > h1 {
+  font-size: 50px;
+}
+.header-wapper > p {
+  font-size: 35px;
 }
 .header-wapper > button {
   background-color: #de6c17;
   color: aliceblue;
-  border-radius: 5px solid #de6c17;
+  border: none;
+  margin-top: 20px;
+  font-size: 20px;
 }
 /* main header */
 .main-header {
@@ -29,6 +38,7 @@
 .main-header-p {
   height: 10px;
   width: 400px;
+  text-align: center;
 }
 /* card */
 .card-container,
@@ -36,6 +46,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 30px;
 }
 .card-container {
   margin-top: 50px;
@@ -49,9 +60,11 @@
 }
 
 .card h1 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 28px;
-  text-align: center;
+}
+.card p {
+  overflow: " [...]";
 }
 .card img {
   width: 250px;
@@ -69,6 +82,21 @@
 
 @media only screen and (max-width: 960px) {
   .header-content {
+    height: 300px;
+    width: 100%;
+  }
+  .header-wapper {
+    margin-left: 50px;
+    width: 50%;
+  }
+  .header-wapper > h1 {
+    font-size: 30px;
+  }
+  .header-wapper > p {
+    font-size: 20px;
+  }
+  .header-wapper > button {
+    font-size: 15px;
   }
   .card {
     width: 600px;
@@ -79,12 +107,25 @@
 }
 
 @media screen and (max-width: 480px) {
-  .card-container {
-    /* display: flex;
-    justify-content: center; */
+  .header-content {
+    height: 200px;
+    width: 100%;
+  }
+  .header-wapper {
+    padding: 30px 15px;
+    margin: 10px;
+    width: 70%;
+  }
+  .header-wapper h1 {
+    font-size: 25px;
+  }
+  .header-wapper * {
+    margin: 5px;
   }
   .card {
-    display: flex;
-    align-items: center;
+    width: 270px;
+    height: 390px;
+    display: grid;
+    align-content: space-between;
   }
 }
